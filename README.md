@@ -31,3 +31,17 @@ Cara Menjalankan Project
 2. Buka terminal di folder project lalu jalankan:
    ```bash
    composer install
+   Duplikat file .env.example menjadi .env dan sesuaikan nama database MySQL:
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=laravel_p10_db
+    DB_USERNAME=root
+    DB_PASSWORD=
+
+Jalankan perintah berikut secara berurutan:
+php artisan key:generate
+php artisan migrate
+php artisan storage:link
+php artisan serve
+Buka http://127.0.0.1:8000 di browser.
